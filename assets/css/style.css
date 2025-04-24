@@ -2,25 +2,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200..700&display=swap');
 
 /*Asterisk wildcard selector to overide default styles added by the browser*/
-*{
-    padding:0;
-    margin:0;
+* {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
 /*General styles*/
-body{
+body {
     min-height: 100vh;
-    display:flex;
+    display: flex;
     flex-direction: column;
     /*General Project styles*/
-    color:#3a3a3a;
+    color: #3a3a3a;
     font-family: 'lato', sans-serif;
 }
 
 /*header*/
-header{
-    background-color:#ffffff;
+header {
+    background-color: #ffffff;
     padding: 0 1rem;
     position: fixed;
     z-index: 99;
@@ -31,12 +31,12 @@ header{
     align-items: baseline;
 }
 
-header a{
+header a {
     text-decoration: none;
     color: inherit;
 }
 
-h1{
+h1 {
     font-family: 'oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -44,25 +44,25 @@ h1{
 }
 
 /*nav bar*/
-#menu{
+#menu {
     font-size: 110%;
     letter-spacing: 4px;
     list-style-type: none;
 }
 
-#menu > li {
+#menu>li {
     margin-bottom: 1em;
 }
 
-.active{
+.active {
     border-bottom: 1px solid #3a3a3a;
 }
 
 /*navbar menu with dropdown toggle*/
-nav{
+nav {
     position: absolute;
     background-color: #ffffff;
-    width:100%;
+    width: 100%;
     left: 0;
     padding: 0 1rem;
     box-shadow: 0 2px 2px #3a3a3a;
@@ -71,68 +71,81 @@ nav{
 }
 
 /*nav toggle*/
-#nav-toggle:checked~nav{
+#nav-toggle:checked~nav {
     display: block;
 }
 
-#nav-toggle{
-    display:none;
+#nav-toggle {
+    display: none;
 }
 
-.nav-toggle-label{
+.nav-toggle-label {
     font-size: 2rem;
 }
+
 /*main content*/
-main{
-    background-color:lightblue;
+main {
+    background-color: lightblue;
     /*make main element take up any surplus space to push footer down*/
     flex: 1 0 auto;
     margin-top: 47px;
 }
+
 /*footer*/
-footer{
-    background-color: orange;
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+#social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: #3a3a3a;
 }
 
 /*media query: tablets and larger (768px and up)*/
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
+
     /*header*/
-   nav{
-    display:block;
-    position:relative;
-    box-shadow:none;
-    width:fit-content;
-    padding-right: 1rem;
-   }
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
 
-   #menu{
-    display:flex;
-   }
+    #menu {
+        display: flex;
+    }
 
-   #menu > li{
-    padding-left: 1rem;
-   }
+    #menu>li {
+        padding-left: 1rem;
+    }
 
-   .nav-toggle-label{
-    display:none;
-   }
+    .nav-toggle-label {
+        display: none;
+    }
 
-   #logo{
-    font-size:280%;
-    line-height: 75px;
-    margin: 0 0.5rem;
-   }
+    #logo {
+        font-size: 280%;
+        line-height: 75px;
+        margin: 0 0.5rem;
+    }
 
-   /* Main content*/ 
-   main{
-    /*push main content down to accomedate screen size*/
-    margin-top: 79px;
-   }
+    /* Main content*/
+    main {
+        /*push main content down to accomedate screen size*/
+        margin-top: 79px;
+    }
 }
 
 /* larger devices (for laptops and desktops, 992px and up)*/
-@media screen and (min-width: 992px){
-    #menu a:hover{
+@media screen and (min-width: 992px) {
+    #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
 
